@@ -43,29 +43,20 @@ body {
     padding: 20px;
     overflow: hidden;
     transition: 0.5s;
+    position: fixed; /* القائمة ثابتة في أعلى الشاشة */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* تجعل القائمة فوق العناصر الأخرى */
 }
 
 .menu:hover{
     width: 220px;
 }
 
-
-@media (max-width: 768px) {
-    .menu:hover {
-        width: 180px;
-    }
-}
-
-@media (max-width: 576px) {
-    .menu:hover {
-        width: 160px;
-    }
-}
-
 ul {
     list-style: none;
     position: relative;
-    height: 95%;
+    height: calc(100% - 40px);
 }
 
 ul li a {
@@ -102,6 +93,7 @@ ul li a i{
 .content {
     flex: 1;
     padding: 20px;
+    margin-left: 79px; /* لتجنب تداخل المحتوى مع القائمة */
 }
 
 .search {
@@ -180,13 +172,13 @@ input:focus {
 
 @media (max-width: 768px) {
     .anime {
-        width: calc(50% - 20px);
+        width: 30%;
     }
 }
 
 @media (max-width: 576px) {
     .anime {
-        width: 47%; 
+        width: 31%; 
     }
 }
 
@@ -237,7 +229,3 @@ input:focus {
     color: #888888;
     text-align: right;
 }
-
-
-
-
