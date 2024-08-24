@@ -38,7 +38,7 @@ body {
 }
 .menu {
     background-color: #1F1F1F;
-    width: 85px;
+    width: 79px;
     height: 100vh;
     padding: 20px;
     overflow: hidden;
@@ -49,27 +49,16 @@ body {
     width: 260px;
 }
 
-@media (max-width: 1200px) {
-    .menu:hover {
-        width: calc(25% - 20px);
-    }
-}
-
-@media (max-width: 992px) {
-    .menu:hover {
-        width: calc(33.33% - 20px);
-    }
-}
 
 @media (max-width: 768px) {
     .menu:hover {
-        width: calc(50% - 20px);
+        width: 200px;
     }
 }
 
 @media (max-width: 576px) {
     .menu:hover {
-        width: calc(50% - 20px); 
+        width: 160px;
     }
 }
 
@@ -87,7 +76,7 @@ ul li a {
     border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     background-color: #2C2C2C;
     color: #ffffff;
     transition: 0.5s;
