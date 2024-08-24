@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     color: #ffffff; 
     box-sizing: border-box;
 }
-
 
 body {
     background-color: #121212;
@@ -33,20 +32,46 @@ body {
     border: 2px solid #fff;
     flex-shrink: 0;
 }
+
 .img-box img {
     width: 100%;
 }
+
 .menu {
     background-color: #1F1F1F;
     width: 85px;
     height: 100vh;
     padding: 20px;
     overflow: hidden;
-    transition: 0.5s;
+    transition: width 0.5s;
 }
 
-.menu:hover{
+.menu:hover {
     width: 260px;
+}
+
+@media (max-width: 1200px) {
+    .menu:hover {
+        width: 200px; /* عرض القائمة الجانبية عند المرور فوقها على الشاشات الأصغر */
+    }
+}
+
+@media (max-width: 992px) {
+    .menu:hover {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu:hover {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu:hover {
+        width: 120px;
+    }
 }
 
 ul {
@@ -63,12 +88,13 @@ ul li a {
     border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px; /* تقليل المسافة بين الأيقونة والنص */
     background-color: #2C2C2C;
     color: #ffffff;
-    transition: 0.5s;
+    transition: background-color 0.5s;
 }
-ul li a:hover, .active{
+
+ul li a:hover, .active {
     background-color: #885858;
 }
 
@@ -80,10 +106,10 @@ ul li a:hover, .active{
 
 .log-out a {
     background-color: #f00c0c;
-    color: #000000; 
+    color: #000000;
 }
 
-ul li a i{
+ul li a i {
     font-size: 20px;
 }
 
@@ -94,25 +120,25 @@ ul li a i{
 
 .search {
     padding: 10px;
-    border-radius: 25px; 
+    border-radius: 25px;
     background-color: #1F1F1F;
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 600px; 
-    margin: 20px auto; 
+    max-width: 600px;
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; 
+    position: relative;
 }
 
 .search input {
     width: 0;
     font-size: 18px;
-    padding: 8px 16px; 
+    padding: 8px 16px;
     border: none;
     border-radius: 25px;
     color: #fff;
-    background-color: #1F1F1F; 
+    background-color: #1F1F1F;
     transition: width 0.3s ease, opacity 0.3s ease;
     opacity: 0;
 }
@@ -121,8 +147,7 @@ ul li a i{
 .search input:focus {
     width: 90%;
     opacity: 1;
-    outline: none; 
-    background-color: #1F1F1F; 
+    outline: none;
 }
 
 input:focus {
@@ -151,7 +176,7 @@ input:focus {
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 @media (max-width: 1200px) {
@@ -174,10 +199,9 @@ input:focus {
 
 @media (max-width: 576px) {
     .anime {
-        width: calc(50% - 20px); 
+        width: calc(100% - 20px); /* عرض المربع بالكامل في الشاشات الصغيرة جداً */
     }
 }
-
 
 .anime img {
     width: 100%;
