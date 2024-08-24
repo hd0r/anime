@@ -122,9 +122,9 @@ ul li a i{
 .content {
     flex: 1;
     padding: 20px;
-    margin-left: 79px; /* لتجنب تداخل المحتوى مع القائمة */
+    margin-left: 0; /* إزالة الهامش الأيسر */
+    padding-top: 20px; /* إضافة مساحة أعلى */
 }
-
 .search {
     padding: 10px;
     border-radius: 25px; 
@@ -175,6 +175,8 @@ input:focus {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin: 0; /* إزالة أي هامش إضافي */
+    padding: 0; /* إزالة أي حشوة إضافية */
 }
 
 .anime {
