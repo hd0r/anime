@@ -46,13 +46,13 @@ body {
 }
 
 .menu:hover{
-    width: 260px;
+    width: 220px;
 }
 
 
 @media (max-width: 768px) {
     .menu:hover {
-        width: 200px;
+        width: 180px;
     }
 }
 
@@ -69,14 +69,13 @@ ul {
 }
 
 ul li a {
-    display: block;
     text-decoration: none;
     padding: 10px;
     margin: 10px 0;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     background-color: #2C2C2C;
     color: #ffffff;
     transition: 0.5s;
@@ -154,11 +153,11 @@ input:focus {
 .anime-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .anime {
-    width: calc(20% - 20px);
+    width: 15%;
     background-color: #2C2C2C;
     border-radius: 8px;
     padding: 10px;
@@ -193,27 +192,50 @@ input:focus {
 
 
 .anime img {
-    width: 100%;
+    width: 80%;
     border-radius: 5px;
 }
 
 .anime-info {
-    padding: 10px;
+    padding: 5px;
     color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* لضبط العناصر على جانبي السطر */
+    align-items: center;
+    gap: 2px;
+    flex-direction: column; /* لضبط النصوص بشكل عمودي */
+    align-items: flex-start;
 }
 
 .anime-info h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
+    font-family: sans-serif;
+    align-self: flex-start; /* لضبط الاسم في بداية السطر */
 }
 
-.anime-info .rating {
-    margin: 5px 0;
-    font-size: 16px;
+.rating-progress {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 50%;
+    margin-top: 5px;
+}
+
+.rating {
+    font-size: 10px;
     color: #FFD700;
+    text-align: left;
+}
+.rating i {
+    padding-left: 5px;
+}
+.progress {
+    font-size: 10px;
+    color: #888888;
+    text-align: right;
 }
 
-.anime-info .progress {
-    font-size: 14px;
-    color: #888888;
-}
+
+
+
