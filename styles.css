@@ -218,8 +218,9 @@ input:focus {
     display: flex;
     justify-content: space-between;
     text-align: left;
-    width: 50%;
+    width: 100%;
     margin-top: 5px;
+    gap: 5px;
 }
 
 .rating {
@@ -228,7 +229,7 @@ input:focus {
     text-align: left;
 }
 .rating i {
-    padding-left: 5px;
+    padding-left: 2px;
 }
 .progress {
     font-size: 10px;
