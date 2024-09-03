@@ -1,276 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mangao</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    
-    <div class="menu">
-        <ul>
-            <li class="profile">
-                <div class="img-box">
-                    <img src="img/profile.jpg" alt="profile">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mangao</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="menu">
+            <ul>
+                <li class="profile">
+                    <div class="img-box">
+                        <img src="img/profile.jpg" alt="profile">
+                    </div>
+                    <h2>Khalx</h2>
+                </li>
+                 <hr>
+                <li>
+                    <a class="active" href="#">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Anime</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Manga</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>List</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>News</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>Settings</p>
+                    </a>
+                </li>
+                <li class="log-out">
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Log Out</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="menu-header">
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <h2>Khalx</h2>
-            </li>
-            <li>
-                <a class="active" href="#">
-                    <i class="fa-solid fa-house"></i>
-                    <p>Home</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                    <p>Profile</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-tv"></i>
-                    <p>Anime</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-book-open"></i>
-                    <p>Manga</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-list-ul"></i>
-                    <p>List</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-newspaper"></i>
-                    <p>News</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-gear"></i>
-                    <p>Settings</p>
-                </a>
-            </li>
-            <li class="log-out">
-                <a href="#">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <p>Log Out</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="content">
-        <div class="menu-header">
-            <div class="search">
-                <input type="text" placeholder="Search...">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="anime-grid">
+                <!-- تكرار العناصر -->
+                <div class="anime">
+                    <img src="img/onePiece.png" alt>
+                    <div class="anime-info">
+                        <h3>One Piece</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.6<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/AttackOnTitan.png" alt>
+                    <div class="anime-info">
+                        <h3>Attack On Titan</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.7<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/bokuNoHero.png" alt>
+                    <div class="anime-info">
+                        <h3>Boku No Hero</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.0<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/theFable.png" alt>
+                    <div class="anime-info">
+                        <h3>The Fable</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.0<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/jujutsukaisen.png" alt>
+                    <div class="anime-info">
+                        <h3> Jujutsu Kaisen</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.0<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Naruto.png" alt>
+                    <div class="anime-info">
+                        <h3>Naruto</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/hunter.png" alt>
+                    <div class="anime-info">
+                        <h3>Hunter X Hunter</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.5<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Bleach.png" alt>
+                    <div class="anime-info">
+                        <h3>Bleach</h3>
+                        <div class="rating-progress">
+                            <p class="rating">9.8<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="anime">
+                    <img src="img/Monster.png" alt>
+                    <div class="anime-info">
+                        <h3>Monster</h3>
+                        <div class="rating-progress">
+                            <p class="rating">8.3<i class="fa-solid fa-star"
+                                    style="color: #FFD43B; font-size: 10px;"></i></p>
+                            <p class="progress">progress</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- أضف المزيد من العناصر حسب الحاجة -->
             </div>
         </div>
-        <div class="anime-grid">
-            <!-- تكرار العناصر -->
-            <div class="anime">
-                <img src="img/onePiece.png" alt="">
-                <div class="anime-info">
-                    <h3>One Piece</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.6<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/AttackOnTitan.png" alt="">
-                <div class="anime-info">
-                    <h3>Attack On Titan</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.7<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/bokuNoHero.png" alt="">
-                <div class="anime-info">
-                    <h3>Boku No Hero</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.0<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/theFable.png" alt="">
-                <div class="anime-info">
-                    <h3>The Fable</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.0<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/jujutsukaisen.png" alt="">
-                <div class="anime-info">
-                    <h3> Jujutsu Kaisen</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.0<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Naruto.png" alt="">
-                <div class="anime-info">
-                    <h3>Naruto</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/hunter.png" alt="">
-                <div class="anime-info">
-                    <h3>Hunter X Hunter</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.5<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Bleach.png" alt="">
-                <div class="anime-info">
-                    <h3>Bleach</h3>
-                    <div class="rating-progress">
-                        <p class="rating">9.8<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="anime">
-                <img src="img/Monster.png" alt="">
-                <div class="anime-info">
-                    <h3>Monster</h3>
-                    <div class="rating-progress">
-                        <p class="rating">8.3<i class="fa-solid fa-star" style="color: #FFD43B; font-size: 10px;"></i></p>
-                        <p class="progress">progress</p>
-                    </div>
-                </div>
-                
-            </div>
-            <!-- أضف المزيد من العناصر حسب الحاجة -->
-        </div>
-    </div>
-</body>
-<script>
+    </body>
+    <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
