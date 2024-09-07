@@ -5,15 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mangao</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
     </head>
-    <body>
+    <body class="light-mode">
 
         <div class="menu">
             <ul>
@@ -23,45 +21,16 @@
                     </div>
                     <h2>Khalx</h2>
                 </li>
-                 <hr>
-                <li>
-                    <a class="active" href="#">
-                        <p>Home</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>Profile</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>Anime</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>Manga</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>News</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>Settings</p>
-                    </a>
-                </li>
+                <li><a class="active" href="#"><i class="fas fa-home"></i><p>Home</p></a></li>
+                <li><a href="#"><i class="fas fa-user"></i><p>Profile</p></a></li>
+                <li><a href="#"><i class="fas fa-tv"></i><p>Anime</p></a></li>
+                <li><a href="#"><i class="fas fa-book"></i><p>Manga</p></a></li>
+                <li><a href="#"><i class="fas fa-list"></i><p>List</p></a></li>
+                <li><a href="#"><i class="fas fa-newspaper"></i><p>News</p></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i><p>Settings</p></a></li>
                 <li class="log-out">
                     <a href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <i class="fas fa-sign-out-alt"></i>
                         <p>Log Out</p>
                     </a>
                 </li>
@@ -296,6 +265,49 @@
         }
     });
 
+  // Add this new code for theme toggle
+  const body = document.body;
+  const themeToggle = document.createElement('button');
+  themeToggle.textContent = '🌙';
+  themeToggle.style.position = 'fixed';
+  themeToggle.style.bottom = '20px';
+  themeToggle.style.right = '20px';
+  themeToggle.style.zIndex = '1000';
+  themeToggle.style.padding = '10px';
+  themeToggle.style.borderRadius = '50%';
+  themeToggle.style.border = 'none';
+  themeToggle.style.backgroundColor = 'var(--accent-color)';
+  themeToggle.style.color = '#ffffff';
+  themeToggle.style.cursor = 'pointer';
+
+  body.appendChild(themeToggle);
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    
+    // Add this line to update anime and anime-info colors
+    updateAnimeColors();
+  });
+
+  // Add this new function to update anime and anime-info colors
+  function updateAnimeColors() {
+    const animeElements = document.querySelectorAll('.anime');
+    const isDarkMode = body.classList.contains('dark-mode');
+    
+    animeElements.forEach(anime => {
+      anime.style.backgroundColor = isDarkMode ? 'var(--card-background)' : '#ffffff';
+      const animeInfo = anime.querySelector('.anime-info');
+      if (animeInfo) {
+        animeInfo.style.backgroundColor = isDarkMode ? 'rgba(44, 44, 44, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+      }
+    });
+  }
+
+  // Call the function initially to set the correct colors
+  updateAnimeColors();
+
+</script>
 
 </script>
 </html>
