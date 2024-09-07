@@ -12,7 +12,7 @@
    
     </head>
     <body class="light-mode">
-
+        <!-- menu -->
         <div class="menu">
             <ul>
                 <li class="profile">
@@ -36,7 +36,11 @@
                 </li>
             </ul>
         </div>
+        <!-- // menu // -->
+
+        <!-- content -->
         <div class="content">
+            <!-- menu-header -->
             <div class="menu-header">
                 <div class="search">
                     <input type="text" placeholder="Search...">
@@ -46,6 +50,9 @@
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
+            <!-- // menu-header // -->
+
+            <!-- anime-grid -->
             <div class="anime-grid">
                 <!-- تكرار العناصر -->
                 <div class="anime">
@@ -245,7 +252,9 @@
                 </div>
                 <!-- أضف المزيد من العناصر حسب الحاجة -->
             </div>
+            <!-- // anime-grid // -->
         </div>
+        <!-- // content // -->
     </body>
     <script>
     const menuToggle = document.querySelector('.menu-toggle');
@@ -265,49 +274,50 @@
         }
     });
 
-  // Add this new code for theme toggle
-  const body = document.body;
-  const themeToggle = document.createElement('button');
-  themeToggle.textContent = '🌙';
-  themeToggle.style.position = 'fixed';
-  themeToggle.style.bottom = '20px';
-  themeToggle.style.right = '20px';
-  themeToggle.style.zIndex = '1000';
-  themeToggle.style.padding = '10px';
-  themeToggle.style.borderRadius = '50%';
-  themeToggle.style.border = 'none';
-  themeToggle.style.backgroundColor = 'var(--accent-color)';
-  themeToggle.style.color = '#ffffff';
-  themeToggle.style.cursor = 'pointer';
+    // إنشاء زر تبديل السمة
+    const body = document.body;
+    const themeToggle = document.createElement('button');
+    themeToggle.textContent = '🌙';
+    themeToggle.style.position = 'fixed';
+    themeToggle.style.bottom = '20px';
+    themeToggle.style.right = '20px';
+    themeToggle.style.zIndex = '1000';
+    themeToggle.style.padding = '10px';
+    themeToggle.style.borderRadius = '50%';
+    themeToggle.style.border = 'none';
+    themeToggle.style.backgroundColor = 'var(--accent-color)';
+    themeToggle.style.color = '#ffffff';
+    themeToggle.style.cursor = 'pointer';
 
-  body.appendChild(themeToggle);
-
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    
-    // Add this line to update anime and anime-info colors
-    updateAnimeColors();
-  });
-
-  // Add this new function to update anime and anime-info colors
-  function updateAnimeColors() {
-    const animeElements = document.querySelectorAll('.anime');
-    const isDarkMode = body.classList.contains('dark-mode');
-    
-    animeElements.forEach(anime => {
-      anime.style.backgroundColor = isDarkMode ? 'var(--card-background)' : '#ffffff';
-      const animeInfo = anime.querySelector('.anime-info');
-      if (animeInfo) {
-        animeInfo.style.backgroundColor = isDarkMode ? 'rgba(44, 44, 44, 0.8)' : 'rgba(255, 255, 255, 0.8)';
-      }
+    body.appendChild(themeToggle);
+    // إضافة مستمع حدث لزر تبديل السمة
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        
+         // تحديث ألوان عناصر الأنمي
+        updateAnimeColors();
     });
-  }
 
-  // Call the function initially to set the correct colors
+    // دالة لتحديث ألوان عناصر الأنمي
+    function updateAnimeColors() {
+        const animeElements = document.querySelectorAll('.anime');
+        const isDarkMode = body.classList.contains('dark-mode');
+         // تحديث لون الخلفية لكل عنصر أنمي
+        animeElements.forEach(anime => {
+        anime.style.backgroundColor = isDarkMode ? 'var(--card-background)' : '#ffffff';
+        const animeInfo = anime.querySelector('.anime-info');
+        if (animeInfo) {
+            // تحديث لون خلفية معلومات الأنمي
+            animeInfo.style.backgroundColor = isDarkMode ? 'rgba(44, 44, 44, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+        }
+        });
+    }
+
+  // استدعاء الدالة مبدئياً لتعيين الألوان الصحيحة
   updateAnimeColors();
-
-</script>
-
+  
+    // شرح إضافي: هذا الكود يقوم بإنشاء زر لتبديل السمة بين الوضع الفاتح والداكن
+    // عند النقر على الزر، يتم تغيير السمة وتحديث ألوان عناصر الأنمي وفقاً للوضع الحالي
 </script>
 </html>

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Root Variables */
 :root {
+  /* تعريف المتغيرات الأساسية للألوان والظلال */
   --background-color: #f0f2f5;
   --menu-background: #ffffff;
   --text-color: #333333;
@@ -11,29 +13,38 @@
   --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Dark Mode */
 .dark-mode {
-    --background-color: #1a1a1a;
-    --menu-background: #2c2c2c;
-    --text-color: #ffffff;
-    --accent-color: #3498db;
-    --hover-color: #2980b9;
-    --card-background: #2c2c2c;
-    --card-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  /* تعريف متغيرات الوضع الداكن */
+  --background-color: #1a1a1a;
+  --menu-background: #2c2c2c;
+  --text-color: #ffffff;
+  --accent-color: #3498db;
+  --hover-color: #2980b9;
+  --card-background: #2c2c2c;
+  --card-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
+
+/* Global Styles */
 * {
+  /* إعادة تعيين الهوامش والحشو لجميع العناصر */
   padding: 0;
   margin: 0;
   color: var(--text-color);
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
+  /* تنسيق الجسم الرئيسي للصفحة */
   background-color: var(--background-color);
   font-family: 'Poppins', sans-serif;
   display: flex;
 }
 
+/* Menu Styles */
 .menu {
+  /* تنسيق القائمة الجانبية */
   background-color: var(--menu-background);
   width: 220px;
   height: 100vh;
@@ -48,10 +59,13 @@ body {
 }
 
 .menu.menu-opened {
+  /* تنسيق القائمة عند فتحها */
   transform: translateX(0);
 }
 
+/* Menu Toggle Button */
 .menu-toggle {
+  /* تنسيق زر فتح/إغلاق القائمة */
   background-color: var(--menu-background);
   display: flex;
   justify-content: center;
@@ -67,11 +81,14 @@ body {
 }
 
 .menu-toggle i {
+  /* تنسيق أيقونة زر القائمة */
   color: var(--text-color);
   font-size: 24px;
 }
 
+/* Profile Section */
 .profile {
+  /* تنسيق قسم الملف الشخصي */
   display: flex;
   align-items: center;
   gap: 20px;
@@ -79,11 +96,13 @@ body {
 }
 
 .profile h2 {
+  /* تنسيق اسم المستخدم */
   font-size: 20px;
   text-transform: capitalize;
 }
 
 .img-box {
+  /* تنسيق صورة الملف الشخصي */
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -93,16 +112,20 @@ body {
 }
 
 .img-box img {
+  /* تنسيق الصورة داخل الإطار */
   width: 100%;
 }
 
+/* Menu List */
 ul {
+  /* تنسيق قائمة العناصر في القائمة الجانبية */
   list-style: none;
   position: relative;
   height: calc(100% - 40px);
 }
 
 ul li a {
+  /* تنسيق روابط القائمة */
   text-decoration: none;
   padding: 10px;
   margin: 5px 0;
@@ -115,6 +138,7 @@ ul li a {
 }
 
 ul li a i {
+  /* تنسيق أيقونات روابط القائمة */
   font-size: 20px;
   width: 25px;
   text-align: center;
@@ -122,22 +146,28 @@ ul li a i {
 
 ul li a:hover,
 .active {
+  /* تنسيق حالة التحويم والتنشيط للروابط */
   background-color: var(--accent-color);
   color: #ffffff;
 }
 
+/* Logout Button */
 .log-out {
+  /* تنسيق زر تسجيل الخروج */
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
 .log-out a {
+  /* تنسيق رابط تسجيل الخروج */
   background-color: #e74c3c;
   color: #ffffff;
 }
 
+/* Content Area */
 .content {
+  /* تنسيق منطقة المحتوى الرئيسية */
   flex: 1;
   padding: 20px;
   margin-left: 0;
@@ -147,7 +177,9 @@ ul li a:hover,
   height: calc(100vh - 60px);
 }
 
+/* Menu Header */
 .menu-header {
+  /* تنسيق رأس القائمة */
   position: fixed;
   top: 0;
   left: 0;
@@ -159,7 +191,9 @@ ul li a:hover,
   box-shadow: var(--card-shadow);
 }
 
+/* Search Bar */
 .search {
+  /* تنسيق شريط البحث */
   padding: 10px;
   border-radius: 25px;
   background-color: var(--card-background);
@@ -178,6 +212,7 @@ ul li a:hover,
 }
 
 .search input {
+  /* تنسيق حقل الإدخال في شريط البحث */
   width: 0;
   font-size: 18px;
   padding: 8px 16px;
@@ -190,11 +225,13 @@ ul li a:hover,
 }
 
 .search:hover {
+  /* تنسيق حالة التحويم لشريط البحث */
   width: 300px;
 }
 
 .search:hover input,
 .search input:focus {
+  /* تنسيق حقل الإدخال عند التحويم أو التركيز */
   width: 100%;
   opacity: 1;
   outline: none;
@@ -202,10 +239,12 @@ ul li a:hover,
 }
 
 input:focus {
+  /* إزالة الحدود عند التركيز على حقل الإدخال */
   outline: none;
 }
 
 .search i {
+  /* تنسيق أيقونة البحث */
   color: var(--text-color);
   font-size: 20px;
   padding: 10px;
@@ -214,14 +253,18 @@ input:focus {
   right: 5px;
 }
 
+/* Anime Grid */
 .anime-grid {
+  /* تنسيق شبكة عرض الأنمي */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   margin-top: 60px;
 }
 
+/* Anime Card */
 .anime {
+  /* تنسيق بطاقة الأنمي */
   background-color: var(--card-background);
   border-radius: 8px;
   padding: 10px;
@@ -232,11 +275,13 @@ input:focus {
 }
 
 .anime img {
+  /* تنسيق صورة الأنمي */
   width: 96%;
   border-radius: 5px;
 }
 
 .anime-info {
+  /* تنسيق معلومات الأنمي */
   padding: 5px;
   color: #ffffff;
   display: flex;
@@ -250,6 +295,7 @@ input:focus {
 }
 
 .anime-info h3 {
+  /* تنسيق عنوان الأنمي */
   margin: 0;
   font-size: 11px;
   font-family: sans-serif;
@@ -258,6 +304,7 @@ input:focus {
 }
 
 .rating-progress {
+  /* تنسيق قسم التقييم والتقدم */
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -267,23 +314,27 @@ input:focus {
 }
 
 .rating {
+  /* تنسيق التقييم */
   font-size: 10px;
   color: #f39c12;
   text-align: left;
 }
 
 .rating i {
+  /* تنسيق أيقونة النجمة */
   padding-left: 2px;
   font-size: 8px;
 }
 
 .progress {
+  /* تنسيق نص التقدم */
   font-size: 10px;
   color: var(--accent-color);
   text-align: right;
 }
 
 .date {
+  /* تنسيق تاريخ الإصدار */
   display: flex;
   width: 100%;
   position: relative;
@@ -293,17 +344,21 @@ input:focus {
 }
 
 .date h2 {
+  /* تنسيق نص التاريخ */
   font-size: 10px;
   color: var(--text-color-2);
 }
 
+/* Responsive Design */
 @media (max-width: 1200px) {
+  /* تعديلات لشاشات الحاسوب المتوسطة */
   .anime-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 
 @media (max-width: 992px) {
+  /* تعديلات لشاشات الحاسوب الصغيرة والأجهزة اللوحية */
   .anime-grid {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
@@ -316,6 +371,7 @@ input:focus {
 }
 
 @media (max-width: 768px) {
+  /* تعديلات للأجهزة اللوحية والهواتف الكبيرة */
   .anime-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
@@ -338,6 +394,7 @@ input:focus {
 }
 
 @media (max-width: 576px) {
+  /* تعديلات للهواتف المتوسطة */
   .anime-grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   }
@@ -358,6 +415,7 @@ input:focus {
 }
 
 @media (max-width: 400px) {
+  /* تعديلات للهواتف الصغيرة */
   .anime-grid {
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
   }
